@@ -68,6 +68,37 @@ const App = () => {
 
     return () => window.removeEventListener("scroll", revealOnScroll);
   }, []);
+  // Detect touch devices and add appropriate classes
+if ('ontouchstart' in window || navigator.maxTouchPoints) {
+  document.body.classList.add('touch-device');
+}
+
+// Close modals when clicking outside on mobile
+document.addEventListener('DOMContentLoaded', function() {
+  const modals = document.querySelectorAll('.modal-overlay');
+  
+  modals.forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  });
+  
+  // Better touch handling for timeline
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  timelineItems.forEach(item => {
+    item.addEventListener('touchstart', function() {
+      this.classList.add('touched');
+    });
+    
+    item.addEventListener('touchend', function() {
+      setTimeout(() => {
+        this.classList.remove('touched');
+      }, 200);
+    });
+  });
+});
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCertIndex, setSelectedCertIndex] = useState(0);
 // Drawing images array

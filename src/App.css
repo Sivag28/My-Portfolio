@@ -1,4 +1,5 @@
 /* General Styling */
+
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -1034,4 +1035,213 @@ box-shadow: 0 0 10px #00FFFF,
 
 .next {
   right: -100px; /* Moves it completely outside */
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* General Adjustments */
+  body {
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Navigation */
+  .sticky-header {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .sticky-header nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sticky-header nav a {
+    margin: 5px 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* Sections */
+  .section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* About Section */
+  .profile-container {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .profile-pic {
+    width: 200px;
+  }
+  
+  /* Timeline */
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .timeline::before {
+    height: 100%;
+    width: 4px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    margin-bottom: 30px;
+    min-width: 80%;
+  }
+  
+  /* Projects */
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-card {
+    width: 90%;
+  }
+  
+  /* Skills */
+  .skills-container {
+    justify-content: center;
+  }
+  
+  .skill-card {
+    width: 100px;
+    padding: 10px;
+  }
+  
+  /* Contact */
+  .contact-card {
+    width: 90%;
+  }
+  
+  /* Hobby Slideshow */
+  .slideshow-container {
+    width: 90%;
+  }
+  
+  .nav-button {
+    position: relative;
+    margin: 10px auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+  
+  .prev, .next {
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+  }
+  
+  /* Experience */
+  .experience-container {
+    width: 90%;
+  }
+  
+  .experience-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .experience-thumbnail {
+    width: 250px;
+    height: 250px;
+  }
+  
+  /* Certifications */
+  .courses-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .course-card {
+    width: 90%;
+  }
+}
+
+/* Smaller Phones */
+@media (max-width: 480px) {
+  .section h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-pic {
+    width: 150px;
+  }
+  
+  .about-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .about-content p {
+    font-size: 0.9rem;
+  }
+  
+  .skill-card {
+    width: 80px;
+    padding: 8px;
+  }
+  
+  .icon {
+    font-size: 30px;
+  }
+  
+  .slideshow-image {
+    height: 300px;
+  }
+}
+/* Make buttons and links more touch-friendly */
+.btn, .nav-button, .contact-card a {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Prevent hover effects from sticking on mobile */
+@media (hover: none) {
+  .section:hover, 
+  .project-card:hover,
+  .skill-card:hover,
+  .course-card:hover,
+  .achievement-card:hover,
+  .contact-card:hover {
+    transform: none !important;
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF !important;
+  }
+}
+/* Touch device specific styles */
+.touch-device .section,
+.touch-device .project-card,
+.touch-device .skill-card,
+.touch-device .course-card,
+.touch-device .achievement-card,
+.touch-device .contact-card {
+  transition: none !important;
+}
+
+.touch-device .timeline-item.touched {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px #00FFFF !important;
+}
+
+/* Larger tap targets for mobile */
+.touch-device nav a {
+  padding: 10px 15px;
+}
+
+.touch-device .btn {
+  padding: 12px 20px;
 }
