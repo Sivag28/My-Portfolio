@@ -277,7 +277,13 @@ const openAchievementModal = (img) => {
             </div>
             <div className="profile-buttons">
               <a href="#contact" className="btn">Contact Me</a>
-              <a href="/siva_resume.pdf" download="Sivasankari_Resume.pdf" className="btn">Resume</a>
+              <a 
+  href={`${process.env.PUBLIC_URL}/siva_resume.pdf`} 
+  download="Sivasankari_Resume.pdf"
+  className="btn"
+>
+  Resume
+</a>
 
             </div>
           </div>
