@@ -68,6 +68,18 @@ const App = () => {
 
     return () => window.removeEventListener("scroll", revealOnScroll);
   }, []);
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/siva_resume.pdf'; // Ensure the file is inside the `public/` folder
+    link.download = 'Sivasankari_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+  <button onClick={downloadResume} className="btn">Resume</button>
+  
+  
   // Detect touch devices and add appropriate classes
 if ('ontouchstart' in window || navigator.maxTouchPoints) {
   document.body.classList.add('touch-device');
