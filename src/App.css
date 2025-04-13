@@ -1047,6 +1047,7 @@ box-shadow: 0 0 10px #00FFFF,
   
   /* Navigation */
   .sticky-header {
+    position: static !important;
     flex-direction: column;
     padding: 10px 0;
   }
@@ -1066,7 +1067,7 @@ box-shadow: 0 0 10px #00FFFF,
   /* Sections */
   .section {
     width: 90%;
-    margin: 260px 10px; 
+    margin: 280px 8px; 
     padding: 20px;
   }
   
