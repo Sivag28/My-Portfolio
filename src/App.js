@@ -255,11 +255,11 @@ const openAchievementModal = (img) => {
         <nav>
           <a href="#about">About</a>
           <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#certifications">Certifications</a>
           <a href="#achievements">Achievements</a>
+          <a href="#experience">Experience</a>
           <a href="#hobby">Hobby</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -319,10 +319,10 @@ const openAchievementModal = (img) => {
       <h1>Education</h1>
       <div className="timeline">
         <div className="timeline-item">
-          <h3>2024-2027</h3>
+          <h3>2023-2027</h3>
           <p>B.Tech in Information Technology</p>
           <p><strong>National Engineering College, Kovilpatti</strong></p>
-          <p>CGPA: 8.59</p>
+          <p>CGPA: 8.46</p>
         </div>
 
         <div className="timeline-item">
